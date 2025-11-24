@@ -14,7 +14,9 @@ Kaggle 데이터 기반 간단한 분석과 다양한 특징 추출 → multi-ty
 
 🔥 지식 증류(Teacher–Student) 실험 위 한계를 극복하고 경량 모델을 만들기 위해 Teacher–Student Distillation을 도입 - 학습 과정에서 모델 경량화 및 성능 유지 아이디어인 지식 증류(Knowledge Distillation)를 접했고, 이를 직접 구현해보기로 함.
 Teacher 모델 - Weighted F1 ≈ 0.84, Student 모델 Weighted F1 ≈ 0.61 (생각보다 차이가 많이 나서 당황)
+
 Teacher 대비 파라미터 수가 크게 줄어든 영향과 distillation 세팅(α, temperature 등) 정확한 이유는 모르지만 성능이 더 낮게 기록
+
 Student가 Teacher의 soft 정보를 충분히 흡수하지 못한 상태이므로..α/temperature를 조정하거나 Student 용량을 조금 늘리는 방법을 생각 
 | 모델                  | 크기 | 속도 | 성능            |
 | ------------------- | -- | -- | ------------- |
