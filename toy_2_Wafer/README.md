@@ -1,4 +1,4 @@
-###프로젝트 배경 
+### 프로젝트 배경 
 대학원 시절 웨이퍼 맵 데이터를 활용해 간단한 실험을 진행한 경험이 있으며, 이를 확장하고 싶어 개인 토이 프로젝트를 시작했습니다.
 아래 블로그 코드를 참고해 Kaggle WM 데이터셋을 복기했고, 논문 “A Voting Ensemble Classifier for Wafer Map Defect Patterns Identification in Semiconductor Manufacturing”의 아이디어와 유사한 방식으로 다중 특징 추출·전처리를 수행했습니다.
 참고: https://aiegg-travel.tistory.com/entry/Kaggle-WM-Dataset%EC%9C%BC%EB%A1%9C-Wafer-Map-Defect-Pattern-%EB%B6%84%EB%A5%98-%EC%8B%A4%EC%8A%B5
