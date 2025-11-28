@@ -7,12 +7,12 @@
 Kaggle 데이터 기반 간단한 분석과 다양한 특징 추출 → multi-type feature 조합 후 One-vs-One SVM 학습 → test weighted F1 ≈ 72%.
 다른 특징 추출/모델을 탐색하며 성능 향상을 모색
 
-🔥 CNN 직접 학습 시 test weighted F1 ≈ 85% 달성.
+🔥 CNN 직접 학습 시 test weighted F1 ≈ 85% 달성. (cnn_test.ipynb)
 
 🔥 AutoEncoder(AE)로 이미지를 재구성한 뒤, 인코더 잠재벡터 z를 CNN 입력으로 사용했으나 성능이 기대 이하
-“잠재벡터를 다시 CNN 입력으로 쓰면 더 좋을까?”라는 가설을 검증했지만 오히려 기존 CNN보다 낮은 성능 - 잠재백터 z만 사용하는 대신 원본 이미지 vs 재구성 이미지 차이(Residual map)를 추가 입력/증강으로 활용하면 결함 위치 정보를 더 잘 드러낼 수 있을 것이라는 아이디어 도출.
+“잠재벡터를 다시 CNN 입력으로 쓰면 더 좋을까?”라는 가설을 검증했지만 오히려 기존 CNN보다 낮은 성능 - 잠재백터 z만 사용하는 대신 원본 이미지 vs 재구성 이미지 차이(Residual map)를 추가 입력/증강으로 활용하면 결함 위치 정보를 더 잘 드러낼 수 있을 것이라는 아이디어 도출.(AE.ipynb)
 
-✔✔✔ **오토인코더 보완**  ✔✔✔
+✔✔✔ **오토인코더 보완**  ✔✔✔ (AE_anomaly.ipynb)
   1. 초기 가설
     + 오토인코더를 통해 입력 데이터를 압축 → latent vector 추출
     + latent vector를 CNN 입력으로 사용하면 특징이 잘 요약되어 분류 성능이 향상될 것이라 기대
@@ -36,7 +36,7 @@ Teacher 모델 - Weighted F1 ≈ 0.84, Student 모델 Weighted F1 ≈ 0.61 (생�
 
 Teacher 대비 파라미터 수가 크게 줄어든 영향과 distillation 세팅(α, temperature 등) 정확한 이유는 모르지만 성능이 더 낮게 기록
 
-Student가 Teacher의 soft 정보를 충분히 흡수하지 못한 상태이므로..α/temperature를 조정하거나 Student 용량을 조금 늘리는 방법을 생각 
+Student가 Teacher의 soft 정보를 충분히 흡수하지 못한 상태이므로..α/temperature를 조정하거나 Student 용량을 조금 늘리는 방법을 생각 (TS_model.ipynb)
 | 모델                  | 크기 | 속도 | 성능            |
 | ------------------- | -- | -- | ------------- |
 | Teacher             | 큼  | 느림 | 높음            |
