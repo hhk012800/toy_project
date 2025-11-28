@@ -5,7 +5,7 @@
 
 기존 실험 요약
 Kaggle 데이터 기반 간단한 분석과 다양한 특징 추출 → multi-type feature 조합 후 One-vs-One SVM 학습 → test weighted F1 ≈ 72%.
-다른 특징 추출/모델을 탐색하며 성능 향상을 모색
+다른 특징 추출/모델을 탐색하며 성능 향상을 모색 (wb_data.ipynb)
 
 🔥 CNN 직접 학습 시 test weighted F1 ≈ 85% 달성. (cnn_test.ipynb)
 
